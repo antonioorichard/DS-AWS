@@ -1,0 +1,3 @@
+[submodule "AWS-private-files"]
+	path = AWS-private-files
+	url = https://github.com/antonioorichard/AWS-private-files
