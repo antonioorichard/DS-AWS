@@ -1,0 +1,89 @@
+sg_uf_not -> é uma informação que pode ser usada para agrupar as pessoas e tirar insides
+
+CLASSI_FIN - Classificação final do caso -- TARGET
+
+1-SRAG por influenza
+2-SRAG por outro vírus respiratório
+3-SRAG por outro agente etiologico qual
+4-SRAG não especificado
+5-SRAG por covid-19
+
+# Formas de tratar os NaN's
+
+1. Existens algumas informações que não tem utilidade para o modelo de M.L na classificação.
+2. Mas tem utilidade para compreensão do problemas e respostas para hipóteses!
+3. E algumas pela falta informação e quantidade de NaN's são inúteis! 
+Dados com NaN's
+
+Informação  > Recomendação
+
+## COM UTILIDADE, MAS TEM NaN's > 
+[
+'nosocomial',
+'ave_suino',
+'febre',
+'tosse',
+'garganta', 
+'dispneia',
+'desc_resp',
+'saturacao',
+'diarreia',
+'vomito', 
+'outro_sin',  
+'cardiopati',
+'hematologi',
+'sind_down',
+'hepatica',
+'asma',
+'diabetes',
+'neurologic',
+'pneumopati',
+'imunodepre',
+'renal',
+'obesidade',
+'obes_imc',
+'out_morbi', 
+'morb_desc',
+'vacina',
+'mae_vac',
+'m_amamenta',
+'antiviral',
+'hospital',
+'uti',
+'suport_ven',
+'raiox_res',
+'raiox_out',
+'amostra',
+'out_amost',
+'out_anim',
+'dor_abd',
+'fadiga',
+'perd_olft',
+'perd_pala',
+'tomo_res',
+'tomo_out',
+'vacina_cov',
+'fnt_in_cov'
+] 
+OBS P/ CICLO 2:É necessário fazer um estudo quais são os sintomas das doenças que queremos classificar 
+e o meio que pode obter ela, ademais informações deve serem descartas, isso ajudará construção 
+do raciocínio do modelo.
+OBS 2: Para efeito de controle colocarei aqui duas colunas muito importante, mas que não possuem NaN's - vacina_cov, 'dose_1_cov', 'dose_2_cov', 'dose_ref'
+
+## DADOS SEM UTILIDADE PARA O MODELO M.L > Drop do dataset do m.l
+[
+'id_regiona', 
+'co_regiona',
+'cs_escol_n',  
+'sg_uf', 	   
+'cs_zona',
+'sg_uf_not',
+'id_municip',
+'co_mun_not',
+'id',
+'cod_idade',
+'delta_uti'     ]
+
+## DADOS SEM UTILIDADE ALGUMA > Drop Geral
+Colunas que tem mais de 70% de NaN's não tem utilidade, descarte!
+[	'surto_sg']   
