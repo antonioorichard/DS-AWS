@@ -6,7 +6,8 @@
 
 # Ignorar a imagem
 #image.png
-
+#ignorar todos os arquivos swp
+*.swp
 #privado/
 Sobre as colunas.txt
 
